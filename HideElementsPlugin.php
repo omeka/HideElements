@@ -116,7 +116,7 @@ class HideElementsPlugin extends Omeka_Plugin_AbstractPlugin
             }
 
             foreach (array_keys($elements) as $element) {
-                unset($elementsBySet[$elementSet][$element]);
+                unset($elementsBySet[__($elementSet)][$element]);
             }
         }
         return $elementsBySet;
