@@ -105,8 +105,8 @@ class HideElementsPlugin extends Omeka_Plugin_AbstractPlugin
         foreach ($this->_settings[$key] as $elementSet => $elements) {
             if ($elementSet == $itemTypeSetName) {
                 foreach (array_keys($elementsBySet) as $currentSet) {
-                    if (substr_compare($currentSet, $itemTypeSetName,
-                        -strlen($itemTypeSetName), strlen($itemTypeSetName))
+                    if (substr_compare($currentSet, __($itemTypeSetName),
+                        -strlen(__($itemTypeSetName)), strlen(__($itemTypeSetName)))
                         === 0
                     ) {
                         $elementSet = $currentSet;
